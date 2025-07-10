@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -26,10 +25,6 @@ export default function VerifyPage() {
         const data = await res.json();
         if (res.ok) {
           setStatus({ success: true, message: data.message });
-          // Remove auto-redirect after 5 seconds
-          // setTimeout(() => {
-          //   window.location.href = "/signin";
-          // }, 5000);
         } else {
           setStatus({ success: false, message: data.error });
         }
@@ -79,7 +74,7 @@ export default function VerifyPage() {
             <h2 className="text-red-600 font-semibold text-lg text-center mb-4">
               ❌ Failed
             </h2>
-            <p className="text-center">{status.message}</p>
+            <p className="text-center">{status?.message}</p>
             <p className="text-sm text-center mt-4 text-gray-600">
               Already signed up earlier?&nbsp;
               <Link href="/signin" className="text-blue-600 hover:underline">
