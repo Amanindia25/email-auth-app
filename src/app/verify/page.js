@@ -39,7 +39,6 @@ export default function VerifyPage() {
         setLoading(false);
       }
     };
-
     verifyEmail();
   }, [token]);
 
