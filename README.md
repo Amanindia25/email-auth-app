@@ -20,6 +20,24 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+Create a `.env.local` file in the root with the following variables:
+
+```
+MONGODB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+EMAIL_USER=your_gmail_address
+EMAIL_PASS=your_gmail_app_password
+NEXTAUTH_URL=http://localhost:3000
+```
+
+- `MONGODB_URI`: MongoDB Atlas connection string
+- `JWT_SECRET`: Secret key for signing JWT tokens
+- `EMAIL_USER`: Gmail address used for sending verification emails
+- `EMAIL_PASS`: Gmail App Password (not your regular password)
+- `NEXTAUTH_URL`: Base URL of your app (used in email links)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

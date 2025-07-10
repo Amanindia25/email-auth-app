@@ -14,12 +14,13 @@ export default function HomePage() {
       try {
         const res = await fetch("/api/auth/me");
         if (!res.ok) {
-          router.push("/signup");
+          router.push("/signin");
           return;
         }
-        router.push("/home");
+        const data = await res.json();
+        setUser(data.user);
       } catch (err) {
-        router.push("/signup");
+        router.push("/signin");
       } finally {
         setLoading(false);
       }
@@ -31,5 +32,12 @@ export default function HomePage() {
     return <div className="p-4">Loading...</div>;
   }
 
-  return null;
+  return (
+    <div className="p-4">
+      <h1 className="text-2xl font-bold">Welcome {user?.email || "User"} 🎉</h1>
+      <p className="text-gray-600 mt-2">
+        You're logged in to a protected route.
+      </p>
+    </div>
+  );
 }
