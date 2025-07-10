@@ -26,7 +26,7 @@ export default function HomePage() {
       }
     };
     fetchUser();
-  }, []);
+  }, [router]);
 
   if (loading) {
     return <div className="p-4">Loading...</div>;
@@ -35,8 +35,8 @@ export default function HomePage() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold">Welcome {user?.email || "User"} 🎉</h1>
-      <p className="text-gray-600 mt-2">
-        You're logged in to a protected route.
+      <p className="text-gray-600 text-center mt-4">
+        Don&#39;t forget to check your email for verification!
       </p>
     </div>
   );
