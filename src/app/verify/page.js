@@ -69,7 +69,7 @@ export default function VerifyPage() {
                 Sign in here
               </Link>
               <br />
-              Don't have an account?{" "}
+              Don&#39;t have an account?{" "}
               <Link href="/signup" className="text-blue-600 hover:underline">
                 Sign up here
               </Link>
@@ -87,7 +87,7 @@ export default function VerifyPage() {
                 Sign in here
               </Link>
               <br />
-              Don't have an account?{" "}
+              Don&#39;t have an account?{" "}
               <Link href="/signup" className="text-blue-600 hover:underline">
                 Sign up here
               </Link>

@@ -25,7 +25,7 @@ export default function HomePage() {
       }
     };
     fetchUser();
-  }, []);
+  }, [router]);
 
   if (loading) {
     return <div className="p-4">Loading...</div>;

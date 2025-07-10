@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -65,12 +66,12 @@ export default function SignInPage() {
         <Button type="submit" className="w-full">
           Sign In
         </Button>
-        <p className="text-sm text-center mt-4 text-gray-600">
-          Don't have an account?{" "}
-          <a href="/signup" className="text-blue-600 hover:underline">
-            Sign up here
-          </a>
-        </p>
+        <div className="text-sm text-center text-gray-600">
+          Don&#39;t have an account?{" "}
+          <Link href="/signup" className="text-blue-500 hover:underline">
+            Sign up
+          </Link>
+        </div>
       </form>
     </div>
   );
